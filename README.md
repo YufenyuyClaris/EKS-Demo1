@@ -72,13 +72,14 @@ Configuring the EC2 instance to be able to access nodes
     Kubectl get pods
     kubectl exec -it containername -- bin/bash
     
-#  Database configuration. Here 2 seperate databases will be deployed 
+#  Database configuration. Here 2 seperate databases will be deployed. map the database ports to thier respective containers and deploy the databases.
     cd into the path having the database configuration file and add the secrets
     kubectl apply -f mongo-secrets.yaml
     Reference the secret in the database configuration file
     kubectl apply -f mongodb.yaml
     kubectl get all
     kubectl get pod
+    
     
 # We have to create an internal service
   kubectle apply -f mongodb.yaml (to deploy) the services in thesame file)
