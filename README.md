@@ -65,3 +65,28 @@ Configuring the EC2 instance to be able to access nodes
           rm -rf /bin/openssl
           mv /bin/openssl11 /bin/openssl
 
+# Getting the pods
+    clone github url link
+    Deploy the two containers using 
+    kubectl apply -f containername.yaml
+    Kubectl get pods
+    kubectl exec -it containername -- bin/bash
+    
+#  Database configuration. Here 2 seperate databases will be deployed and one 
+    cd into the path having the database configuration file and add the secrets
+    kubectl apply -f mongo-secrets.yaml
+    Reference the secret in the database configuration file
+    kubectl apply -f mongodb.yaml
+    kubectl get all
+    kubectl get pod
+    
+# We have to create an internal service
+  kubectle apply -f mongodb.yaml (to deploy) the services in thesame file)
+  
+  
+      
+    
+    
+    
+
+    
